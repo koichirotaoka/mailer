@@ -90,13 +90,13 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   #追記
-  config.action_mailer.default_url_options = { host: 'https://agile-dawn-78466.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'agile-dawn-78466' }
    # ここに環境変数をuser_name,passwordとして使用することが記されている
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
-    domain: "heroku.com",
+    domain: "herokuapp.com",
     address: "smtp.SendGrid.net",
     port: 587,
     authentication: :plain,
